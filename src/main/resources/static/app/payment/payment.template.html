@@ -1,0 +1,97 @@
+<div class="container isbanContainer">
+
+	<div class="isbanCabeceraContainer">
+		<span>{{ 'helloworld.hello.world' | translate }}</span>
+	</div>
+
+
+	<div class="modoContenedor">
+		<div class="isbanButtonContainer" style="text-align: left">{{ 'helloworld.hello.world' | translate }}</div>
+		<div class="row form-group isbanGroupComboContainer">
+			<div class="col-md-2 text-left">{{ 'helloworld.hello.world' | translate }}</div>
+			<div class="col-md-10 isbanComboContainer">
+				<select class="form-control" ng-model="$ctrl.selectedName"
+					ng-options="x for x in $ctrl.optionStates">
+				</select>
+			</div>
+		</div>
+		<div class="isbanButtonContainer" style="text-align: right">
+			<button class="btn" ng-click="$ctrl.getPayments();">
+				<span class="glyphicon glyphicon-refresh"></span> Get Films
+			</button>
+		</div>
+	</div>
+		
+	<div class="modoContenedor" ng-show="$ctrl.stdos != null">
+		<div class="table-responsive ">
+			<table class="table table-bordered" id="myTable">
+				<thead>
+					<tr class="clickable-row">
+						<th>Firstname</th>
+						<th>Lastname</th>
+						<th>Email</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr ng-repeat="stdo in $ctrl.stdos"  ng-class="{'selected': $ctrl.lastSelected == stdo}" ng-click="$ctrl.setSelected(stdo);" >
+							<th>{{stdo.beneficiaryName}} </th>
+							<th>{{stdo.beneficiaryName}} </th>
+							<th>{{stdo.amount}}</th>
+						</tr>	
+				</tbody>
+			</table>			
+		</div>
+		<div class="isbanButtonContainer" style="text-align: right">
+			<button class="btn" ng-click="$ctrl.getSTDONew();">
+				<span class="glyphicon glyphicon-refresh"></span> Nuevo
+			</button>
+		</div>
+	</div>
+	
+<h4>
+					<span> {{$ctrl.lastSelected}} </span>
+				</h4>
+				
+	<div>
+		<div class="alert alert-info" ng-show="$ctrl.response">
+			<strong>{{ 'helloworld.hello.world' | translate }}</strong> The
+			response is {{$ctrl.response}}!
+		</div>
+		<h1>{{ 'helloworld.hello.world' | translate }}</h1>
+		<p>
+			What's your name? <input ng-model="$ctrl.name" />
+		</p>
+		<button type="submit" class="btn btn-primary" ng-show="$ctrl.name"
+			ng-click="$ctrl.salute()">
+			<span class="glyphicon glyphicon-user"
+				translate="helloworld.btn.submit"
+				translate-value-name="{{$ctrl.name}}"></span>
+		</button>
+
+		<button class="btn btn-primary" ng-show="$ctrl.response"
+			ng-click="$ctrl.clean()">
+			<span class="glyphicon glyphicon-refresh"></span> Clean the form
+		</button>
+
+		<button ng-click="$ctrl.changeLanguage('es')">es</button>
+		<button ng-click="$ctrl.changeLanguage('en')">en</button>
+
+		<button class="btn btn-primary" ng-click="$ctrl.getFilms()">
+			<span class="glyphicon glyphicon-refresh"></span> Get Films
+		</button>
+		<button class="btn btn-primary" ng-click="$ctrl.getPayments()">
+			<span class="glyphicon glyphicon-refresh"></span> Get Films JS
+		</button>
+
+		<div class="container" ng-show="$ctrl.films != null">
+			<div class="film-info-bottom" ng-repeat="film in $ctrl.films">
+				<h4>
+					<span> {{$ctrl.films}} </span>
+				</h4>
+				<h4>
+					<span> {{film.beneficiaryName}} - {{film.amount}} </span>
+				</h4>
+			</div>
+		</div>
+	</div>
+</div>

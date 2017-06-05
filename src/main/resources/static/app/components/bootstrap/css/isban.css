@@ -1,0 +1,140 @@
+@CHARSET "ISO-8859-1";
+
+/* Customize container */
+@media ( min-width : 768px) {
+	.container {
+		max-width: 930px;
+	}
+}
+
+/* Space out content a bit */
+body {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Main marketing message and sign up button */
+.isbanContainer {
+	text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 0;
+	border-width: 1px 0 0 0;
+	border-style: solid none none none;
+	border-color: #fff #e8e8e8 #e8e8e8 #e8e8e8;
+	background-color: #F4F6F7;
+}
+
+.isbanComboContainer {
+	width: 25%;
+	text-align: left;
+}
+
+.isbanGroupComboContainer {
+	margin: 5px;
+	vertical-align: middle;
+}
+
+.isbanButtonContainer {
+	width: 100%;
+	overflow: hidden;
+	height: auto;
+	font-size: 1em !important;
+	font-family: Verdana, Arial, Helvetica, sans-serif !important;
+	background-color: #e8e8e8;
+}
+
+.isbanCabeceraContainer {
+	padding: 0;
+	border-width: 1px 0 0 0;
+	border-style: solid none none none;
+	border-color: #fff #e8e8e8 #e8e8e8 #e8e8e8;
+	background-color: #e8e8e8;
+	text-align: left;
+	font-size: 15px !important;
+	background-image: linear-gradient(180deg, #e8e8e8, #e8e1e8);
+}
+
+.modoContenedor {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #BFBFBF;
+	background-color: #F6F6F6;
+	margin: 14px 20px;
+}
+
+.isbanContainer .btn {
+	padding: 14px 24px;
+	font-size: 15px;
+}
+
+/*Principal table ISBAN*/
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.selected{
+ background-color: #c0c0c0 !important;
+}
+
+/* Everything but the isbanContainer gets side spacing for mobile first views */
+.header, .marketing, .footer {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+	padding-top: 19px;
+	color: #777;
+	border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow>hr {
+	margin: 30px 0;
+}
+
+/* Supporting marketing content */
+.marketing {
+	margin: 40px 0;
+}
+
+.marketing p+h4 {
+	margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+	/* Remove the padding we set earlier */
+	.header, .marketing, .footer {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	/* Space out the masthead */
+	.header {
+		margin-bottom: 30px;
+	}
+	/* Remove the bottom border on the isbanContainer for visual effect */
+	.isbanContainer {
+		border-bottom: 0;
+	}
+}
