@@ -20,4 +20,5 @@ public class StaticResourceConfiguration extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/static/**").addResourceLocations("/resources/static/");
 	}
 
+
 }

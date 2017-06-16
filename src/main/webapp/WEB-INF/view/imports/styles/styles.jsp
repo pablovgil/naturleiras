@@ -4,13 +4,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <link
-	href="<c:url value='/app/components/bootstrap/css/bootstrap.min.css'/>"
+	href="<c:url value='/static/app/components/bootstrap/css/bootstrap.min.css'/>"
 	rel="stylesheet" media="screen">
 
 <link
-	href="<c:url value='/app/components/bootstrap/css/bootstrap-theme.min.css'/>"
+	href="<c:url value='/static/app/components/bootstrap/css/bootstrap-theme.min.css'/>"
 	rel="stylesheet" media="screen">
 
 <link
-	href="<c:url value='/app/components/bootstrap/css/isban.css'/>"
+	href="<c:url value='/static/app/components/bootstrap/css/isban.css'/>"
 	rel="stylesheet" media="screen">
